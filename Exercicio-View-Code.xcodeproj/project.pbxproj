@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		F038B96D29CB2E41002E54D2 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F038B96C29CB2E41002E54D2 /* HomeScreen.swift */; };
 		F038B97429CB31AB002E54D2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F038B97329CB31AB002E54D2 /* HomeViewModel.swift */; };
+		F038B97B29CB638F002E54D2 /* Bakcground + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F038B97A29CB638F002E54D2 /* Bakcground + Extension.swift */; };
+		F038B97D29CB6495002E54D2 /* LabelConfig + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F038B97C29CB6495002E54D2 /* LabelConfig + Extension.swift */; };
+		F038B97F29CB66A9002E54D2 /* ButtonConfig + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F038B97E29CB66A9002E54D2 /* ButtonConfig + Extension.swift */; };
+		F038B98529CB741B002E54D2 /* CalculadoraHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F038B98429CB741B002E54D2 /* CalculadoraHomeVC.swift */; };
+		F038B98729CB7430002E54D2 /* CalculadoraHomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F038B98629CB7430002E54D2 /* CalculadoraHomeScreen.swift */; };
 		F03B76CF29CB2A51007D79D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03B76CE29CB2A51007D79D7 /* AppDelegate.swift */; };
 		F03B76D129CB2A51007D79D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03B76D029CB2A51007D79D7 /* SceneDelegate.swift */; };
 		F03B76D329CB2A51007D79D7 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03B76D229CB2A51007D79D7 /* HomeVC.swift */; };
@@ -19,6 +24,11 @@
 /* Begin PBXFileReference section */
 		F038B96C29CB2E41002E54D2 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		F038B97329CB31AB002E54D2 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		F038B97A29CB638F002E54D2 /* Bakcground + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bakcground + Extension.swift"; sourceTree = "<group>"; };
+		F038B97C29CB6495002E54D2 /* LabelConfig + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LabelConfig + Extension.swift"; sourceTree = "<group>"; };
+		F038B97E29CB66A9002E54D2 /* ButtonConfig + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonConfig + Extension.swift"; sourceTree = "<group>"; };
+		F038B98429CB741B002E54D2 /* CalculadoraHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculadoraHomeVC.swift; sourceTree = "<group>"; };
+		F038B98629CB7430002E54D2 /* CalculadoraHomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculadoraHomeScreen.swift; sourceTree = "<group>"; };
 		F03B76CB29CB2A51007D79D7 /* Exercicio-View-Code.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Exercicio-View-Code.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F03B76CE29CB2A51007D79D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F03B76D029CB2A51007D79D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,13 +59,6 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		F038B96F29CB3099002E54D2 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
 		F038B97029CB30DA002E54D2 /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +83,49 @@
 			path = HomeViewModel;
 			sourceTree = "<group>";
 		};
+		F038B97929CB637A002E54D2 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F038B97A29CB638F002E54D2 /* Bakcground + Extension.swift */,
+				F038B97C29CB6495002E54D2 /* LabelConfig + Extension.swift */,
+				F038B97E29CB66A9002E54D2 /* ButtonConfig + Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		F038B98029CB73C5002E54D2 /* Calculadora */ = {
+			isa = PBXGroup;
+			children = (
+				F038B98329CB73EB002E54D2 /* CalculadoraHomeViewModel */,
+				F038B98229CB73E0002E54D2 /* CalculadoraHomeVC */,
+				F038B98129CB73D5002E54D2 /* CalculadoraHomeScreen */,
+			);
+			path = Calculadora;
+			sourceTree = "<group>";
+		};
+		F038B98129CB73D5002E54D2 /* CalculadoraHomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F038B98629CB7430002E54D2 /* CalculadoraHomeScreen.swift */,
+			);
+			path = CalculadoraHomeScreen;
+			sourceTree = "<group>";
+		};
+		F038B98229CB73E0002E54D2 /* CalculadoraHomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				F038B98429CB741B002E54D2 /* CalculadoraHomeVC.swift */,
+			);
+			path = CalculadoraHomeVC;
+			sourceTree = "<group>";
+		};
+		F038B98329CB73EB002E54D2 /* CalculadoraHomeViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CalculadoraHomeViewModel;
+			sourceTree = "<group>";
+		};
 		F03B76C229CB2A51007D79D7 = {
 			isa = PBXGroup;
 			children = (
@@ -99,8 +145,9 @@
 		F03B76CD29CB2A51007D79D7 /* Exercicio-View-Code */ = {
 			isa = PBXGroup;
 			children = (
-				F038B96F29CB3099002E54D2 /* Extension */,
+				F038B97929CB637A002E54D2 /* Extension */,
 				F038B96E29CB2E46002E54D2 /* Home */,
+				F038B98029CB73C5002E54D2 /* Calculadora */,
 				F03B76CE29CB2A51007D79D7 /* AppDelegate.swift */,
 				F03B76D029CB2A51007D79D7 /* SceneDelegate.swift */,
 				F03B76D729CB2A53007D79D7 /* Assets.xcassets */,
@@ -181,10 +228,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F038B96D29CB2E41002E54D2 /* HomeScreen.swift in Sources */,
+				F038B98529CB741B002E54D2 /* CalculadoraHomeVC.swift in Sources */,
 				F03B76D329CB2A51007D79D7 /* HomeVC.swift in Sources */,
 				F03B76CF29CB2A51007D79D7 /* AppDelegate.swift in Sources */,
+				F038B97F29CB66A9002E54D2 /* ButtonConfig + Extension.swift in Sources */,
+				F038B97D29CB6495002E54D2 /* LabelConfig + Extension.swift in Sources */,
+				F038B98729CB7430002E54D2 /* CalculadoraHomeScreen.swift in Sources */,
 				F038B97429CB31AB002E54D2 /* HomeViewModel.swift in Sources */,
 				F03B76D129CB2A51007D79D7 /* SceneDelegate.swift in Sources */,
+				F038B97B29CB638F002E54D2 /* Bakcground + Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
