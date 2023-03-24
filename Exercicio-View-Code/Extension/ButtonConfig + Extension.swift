@@ -9,7 +9,18 @@ import Foundation
 import UIKit
 
 extension UIButton {
-    convenience init(title: String, font: UIFont, titleColor: UIColor, target: Any?, action: Selector, isEnable: Bool = true, backgroundColor: UIColor, textAlignment: NSTextAlignment = .center, cornerRadius: CGFloat = 0, clipsToBounds: Bool = true ) {
+    convenience init(
+        title: String,
+        font: UIFont,
+        titleColor: UIColor,
+        target: Any?,
+        action: Selector,
+        isEnable: Bool = true,
+        backgroundColor: UIColor,
+        textAlignment: NSTextAlignment = .center,
+        cornerRadius: CGFloat = 0,
+        clipsToBounds: Bool = true ) {
+            
         self.init()
         self.setTitle(title, for: .normal)
         self.titleLabel?.font = font

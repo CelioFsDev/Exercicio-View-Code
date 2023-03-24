@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F002757F29CCD13900756631 /* CalculadoraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F002757E29CCD13900756631 /* CalculadoraViewModel.swift */; };
+		F002758129CCD53D00756631 /* TextFieldConfig + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F002758029CCD53D00756631 /* TextFieldConfig + Extension.swift */; };
+		F002758329CCDDD400756631 /* Constraints + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F002758229CCDDD400756631 /* Constraints + Extension.swift */; };
 		F038B96D29CB2E41002E54D2 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F038B96C29CB2E41002E54D2 /* HomeScreen.swift */; };
 		F038B97429CB31AB002E54D2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F038B97329CB31AB002E54D2 /* HomeViewModel.swift */; };
 		F038B97B29CB638F002E54D2 /* Bakcground + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F038B97A29CB638F002E54D2 /* Bakcground + Extension.swift */; };
@@ -22,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F002757E29CCD13900756631 /* CalculadoraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculadoraViewModel.swift; sourceTree = "<group>"; };
+		F002758029CCD53D00756631 /* TextFieldConfig + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextFieldConfig + Extension.swift"; sourceTree = "<group>"; };
+		F002758229CCDDD400756631 /* Constraints + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constraints + Extension.swift"; sourceTree = "<group>"; };
 		F038B96C29CB2E41002E54D2 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		F038B97329CB31AB002E54D2 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		F038B97A29CB638F002E54D2 /* Bakcground + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bakcground + Extension.swift"; sourceTree = "<group>"; };
@@ -89,6 +95,8 @@
 				F038B97A29CB638F002E54D2 /* Bakcground + Extension.swift */,
 				F038B97C29CB6495002E54D2 /* LabelConfig + Extension.swift */,
 				F038B97E29CB66A9002E54D2 /* ButtonConfig + Extension.swift */,
+				F002758029CCD53D00756631 /* TextFieldConfig + Extension.swift */,
+				F002758229CCDDD400756631 /* Constraints + Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -122,6 +130,7 @@
 		F038B98329CB73EB002E54D2 /* CalculadoraHomeViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				F002757E29CCD13900756631 /* CalculadoraViewModel.swift */,
 			);
 			path = CalculadoraHomeViewModel;
 			sourceTree = "<group>";
@@ -232,9 +241,12 @@
 				F03B76D329CB2A51007D79D7 /* HomeVC.swift in Sources */,
 				F03B76CF29CB2A51007D79D7 /* AppDelegate.swift in Sources */,
 				F038B97F29CB66A9002E54D2 /* ButtonConfig + Extension.swift in Sources */,
+				F002758329CCDDD400756631 /* Constraints + Extension.swift in Sources */,
 				F038B97D29CB6495002E54D2 /* LabelConfig + Extension.swift in Sources */,
+				F002757F29CCD13900756631 /* CalculadoraViewModel.swift in Sources */,
 				F038B98729CB7430002E54D2 /* CalculadoraHomeScreen.swift in Sources */,
 				F038B97429CB31AB002E54D2 /* HomeViewModel.swift in Sources */,
+				F002758129CCD53D00756631 /* TextFieldConfig + Extension.swift in Sources */,
 				F03B76D129CB2A51007D79D7 /* SceneDelegate.swift in Sources */,
 				F038B97B29CB638F002E54D2 /* Bakcground + Extension.swift in Sources */,
 			);
