@@ -11,6 +11,7 @@ class HomeVC: UIViewController {
     
 
     var homeScreen: HomeScreen?
+    let viewModel = HomeViewModel()
     
     
     override func loadView() {
@@ -23,11 +24,21 @@ class HomeVC: UIViewController {
         self.homeScreen?.delegate(delegate: self)
         
     }
-
+    
+    
 
 }
 
 extension HomeVC: HomeScreenProtocol {
+    
+    func tappedTarefasButton() {
+        print(#function)
+    }
+    
+    func tappedAlteraCorButton() {
+        self.view.backgroundColor = viewModel.randomColor()
+    }
+    
     func tappedCalculadoraButton() {
         let calculadoraHomeVC = CalculadoraHomeVC()
         self.navigationController?.pushViewController(calculadoraHomeVC, animated: true)

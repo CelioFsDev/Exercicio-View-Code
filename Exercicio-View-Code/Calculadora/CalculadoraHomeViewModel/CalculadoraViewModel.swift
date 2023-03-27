@@ -15,7 +15,8 @@ class CalculadoraHomeViewModel {
     private var operacao: Operacao = .soma
     
     var resultado: String? {
-        guard let numero1 = self.numero1, let numero2 = self.numero2 else {
+        guard let numero1 = self.numero1,
+              let numero2 = self.numero2 else {
             return nil
         }
         

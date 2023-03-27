@@ -9,6 +9,8 @@ import UIKit
 
 protocol HomeScreenProtocol: AnyObject {
     func tappedCalculadoraButton()
+    func tappedAlteraCorButton()
+    func tappedTarefasButton()
 }
 
 class HomeScreen: UIView {
@@ -34,6 +36,24 @@ class HomeScreen: UIView {
         delegate?.tappedCalculadoraButton()
     }
     
+    lazy var alteraCorButton: UIButton = {
+        let button = UIButton(title: "Altera Cor", font: UIFont.systemFont(ofSize: 16), titleColor: .white, target: self, action: #selector(tappedAlteraCorButton), isEnable: true, backgroundColor: .blue, textAlignment: .center, cornerRadius: 7, clipsToBounds: true)
+        
+        return button
+    }()
+    @objc func tappedAlteraCorButton(_ sender: UIButton){
+        delegate?.tappedAlteraCorButton()
+    }
+    
+    lazy var tarefasButton: UIButton = {
+        let button = UIButton(title: "Tarefas", font: UIFont.systemFont(ofSize: 16), titleColor: .white, target: self, action: #selector(tappedTarefasButton), isEnable: true, backgroundColor: .blue, textAlignment: .center, cornerRadius: 7, clipsToBounds: true)
+        
+        return button
+    }()
+    @objc func tappedTarefasButton(_ sender: UIButton){
+        delegate?.tappedTarefasButton()
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupCreationView()
@@ -50,6 +70,8 @@ class HomeScreen: UIView {
     private func setupCreationView(){
         addSubview(titleLabel)
         addSubview(calculadoraButton)
+        addSubview(alteraCorButton)
+        addSubview(tarefasButton)
     }
     
 
@@ -61,8 +83,18 @@ class HomeScreen: UIView {
             
             calculadoraButton.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 50),
             calculadoraButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            calculadoraButton.heightAnchor.constraint(equalToConstant: 50),
+            calculadoraButton.widthAnchor.constraint(equalToConstant: 100),
             
+            alteraCorButton.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 50),
+            alteraCorButton.centerXAnchor.constraint(equalTo: centerXAnchor),
+            alteraCorButton.heightAnchor.constraint(equalToConstant: 50),
+            alteraCorButton.widthAnchor.constraint(equalToConstant: 100),
             
+            tarefasButton.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 50),
+            tarefasButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            tarefasButton.heightAnchor.constraint(equalToConstant: 50),
+            tarefasButton.widthAnchor.constraint(equalToConstant: 100),
             
         ])
     }

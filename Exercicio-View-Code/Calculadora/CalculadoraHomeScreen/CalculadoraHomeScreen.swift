@@ -16,6 +16,10 @@ class CalculadoraHomeScreen: UIView {
     // MARK: - Properties
 
     weak var delegate: CalculadoraHomeScreenProtocol?
+    
+    public func delegate(delegate: CalculadoraHomeScreenProtocol){
+        self.delegate = delegate
+    }
 
     lazy var nameLabel: UILabel = {
         let label = UILabel(
@@ -135,6 +139,7 @@ class CalculadoraHomeScreen: UIView {
         self.numero2TextField.delegate = delegate
         self.resultadoTextField.delegate = delegate
     }
+    
     
 
         
