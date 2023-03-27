@@ -32,7 +32,8 @@ class HomeVC: UIViewController {
 extension HomeVC: HomeScreenProtocol {
     
     func tappedTarefasButton() {
-        print(#function)
+        let tarefasVC = TarefasVC()
+        self.navigationController?.pushViewController(tarefasVC, animated: true)
     }
     
     func tappedAlteraCorButton() {

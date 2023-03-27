@@ -10,6 +10,11 @@
 		F002757F29CCD13900756631 /* CalculadoraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F002757E29CCD13900756631 /* CalculadoraViewModel.swift */; };
 		F002758129CCD53D00756631 /* TextFieldConfig + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F002758029CCD53D00756631 /* TextFieldConfig + Extension.swift */; };
 		F002758329CCDDD400756631 /* Constraints + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F002758229CCDDD400756631 /* Constraints + Extension.swift */; };
+		F002758B29D1B9E100756631 /* TarefasScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F002758A29D1B9E100756631 /* TarefasScreen.swift */; };
+		F002758D29D1B9EE00756631 /* TarefasViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F002758C29D1B9EE00756631 /* TarefasViewModel.swift */; };
+		F002758F29D1BA8400756631 /* TarefasVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F002758E29D1BA8400756631 /* TarefasVC.swift */; };
+		F002759429D1C54F00756631 /* TableView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F002759329D1C54F00756631 /* TableView + Extension.swift */; };
+		F002759629D1D1C900756631 /* TarefasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F002759529D1D1C900756631 /* TarefasTableViewCell.swift */; };
 		F038B96D29CB2E41002E54D2 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F038B96C29CB2E41002E54D2 /* HomeScreen.swift */; };
 		F038B97429CB31AB002E54D2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F038B97329CB31AB002E54D2 /* HomeViewModel.swift */; };
 		F038B97B29CB638F002E54D2 /* Bakcground + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F038B97A29CB638F002E54D2 /* Bakcground + Extension.swift */; };
@@ -28,6 +33,11 @@
 		F002757E29CCD13900756631 /* CalculadoraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculadoraViewModel.swift; sourceTree = "<group>"; };
 		F002758029CCD53D00756631 /* TextFieldConfig + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextFieldConfig + Extension.swift"; sourceTree = "<group>"; };
 		F002758229CCDDD400756631 /* Constraints + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constraints + Extension.swift"; sourceTree = "<group>"; };
+		F002758A29D1B9E100756631 /* TarefasScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarefasScreen.swift; sourceTree = "<group>"; };
+		F002758C29D1B9EE00756631 /* TarefasViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarefasViewModel.swift; sourceTree = "<group>"; };
+		F002758E29D1BA8400756631 /* TarefasVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarefasVC.swift; sourceTree = "<group>"; };
+		F002759329D1C54F00756631 /* TableView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView + Extension.swift"; sourceTree = "<group>"; };
+		F002759529D1D1C900756631 /* TarefasTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarefasTableViewCell.swift; sourceTree = "<group>"; };
 		F038B96C29CB2E41002E54D2 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		F038B97329CB31AB002E54D2 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		F038B97A29CB638F002E54D2 /* Bakcground + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bakcground + Extension.swift"; sourceTree = "<group>"; };
@@ -55,6 +65,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F002758429D1AF4A00756631 /* Tarefas */ = {
+			isa = PBXGroup;
+			children = (
+				F002759029D1C39700756631 /* TableView */,
+				F002758729D1B8E700756631 /* TarefasVC */,
+				F002758629D1B8E500756631 /* TarefasScreen */,
+				F002758529D1B8E200756631 /* TarefasViewModel */,
+			);
+			path = Tarefas;
+			sourceTree = "<group>";
+		};
+		F002758529D1B8E200756631 /* TarefasViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F002758C29D1B9EE00756631 /* TarefasViewModel.swift */,
+			);
+			path = TarefasViewModel;
+			sourceTree = "<group>";
+		};
+		F002758629D1B8E500756631 /* TarefasScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F002758A29D1B9E100756631 /* TarefasScreen.swift */,
+			);
+			path = TarefasScreen;
+			sourceTree = "<group>";
+		};
+		F002758729D1B8E700756631 /* TarefasVC */ = {
+			isa = PBXGroup;
+			children = (
+				F002758E29D1BA8400756631 /* TarefasVC.swift */,
+			);
+			path = TarefasVC;
+			sourceTree = "<group>";
+		};
+		F002759029D1C39700756631 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				F002759129D1C3E000756631 /* TableViewCell */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		F002759129D1C3E000756631 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F002759529D1D1C900756631 /* TarefasTableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
 		F038B96E29CB2E46002E54D2 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +158,7 @@
 				F038B97E29CB66A9002E54D2 /* ButtonConfig + Extension.swift */,
 				F002758029CCD53D00756631 /* TextFieldConfig + Extension.swift */,
 				F002758229CCDDD400756631 /* Constraints + Extension.swift */,
+				F002759329D1C54F00756631 /* TableView + Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -157,6 +219,7 @@
 				F038B97929CB637A002E54D2 /* Extension */,
 				F038B96E29CB2E46002E54D2 /* Home */,
 				F038B98029CB73C5002E54D2 /* Calculadora */,
+				F002758429D1AF4A00756631 /* Tarefas */,
 				F03B76CE29CB2A51007D79D7 /* AppDelegate.swift */,
 				F03B76D029CB2A51007D79D7 /* SceneDelegate.swift */,
 				F03B76D729CB2A53007D79D7 /* Assets.xcassets */,
@@ -236,17 +299,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F002759629D1D1C900756631 /* TarefasTableViewCell.swift in Sources */,
 				F038B96D29CB2E41002E54D2 /* HomeScreen.swift in Sources */,
 				F038B98529CB741B002E54D2 /* CalculadoraHomeVC.swift in Sources */,
 				F03B76D329CB2A51007D79D7 /* HomeVC.swift in Sources */,
+				F002758D29D1B9EE00756631 /* TarefasViewModel.swift in Sources */,
 				F03B76CF29CB2A51007D79D7 /* AppDelegate.swift in Sources */,
 				F038B97F29CB66A9002E54D2 /* ButtonConfig + Extension.swift in Sources */,
 				F002758329CCDDD400756631 /* Constraints + Extension.swift in Sources */,
 				F038B97D29CB6495002E54D2 /* LabelConfig + Extension.swift in Sources */,
+				F002758B29D1B9E100756631 /* TarefasScreen.swift in Sources */,
+				F002758F29D1BA8400756631 /* TarefasVC.swift in Sources */,
 				F002757F29CCD13900756631 /* CalculadoraViewModel.swift in Sources */,
 				F038B98729CB7430002E54D2 /* CalculadoraHomeScreen.swift in Sources */,
 				F038B97429CB31AB002E54D2 /* HomeViewModel.swift in Sources */,
 				F002758129CCD53D00756631 /* TextFieldConfig + Extension.swift in Sources */,
+				F002759429D1C54F00756631 /* TableView + Extension.swift in Sources */,
 				F03B76D129CB2A51007D79D7 /* SceneDelegate.swift in Sources */,
 				F038B97B29CB638F002E54D2 /* Bakcground + Extension.swift in Sources */,
 			);
