@@ -30,6 +30,11 @@ class HomeVC: UIViewController {
 }
 
 extension HomeVC: HomeScreenProtocol {
+    func tappedAgendaButton() {
+        let agendaVC = AgendaVC()
+        self.navigationController?.pushViewController(agendaVC, animated: true)
+    }
+    
     
     func tappedTarefasButton() {
         let tarefasVC = TarefasVC()

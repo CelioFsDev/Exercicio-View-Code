@@ -15,6 +15,8 @@
 		F002758F29D1BA8400756631 /* TarefasVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F002758E29D1BA8400756631 /* TarefasVC.swift */; };
 		F002759429D1C54F00756631 /* TableView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F002759329D1C54F00756631 /* TableView + Extension.swift */; };
 		F002759629D1D1C900756631 /* TarefasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F002759529D1D1C900756631 /* TarefasTableViewCell.swift */; };
+		F009C47D29D2FECE00590291 /* AgendaScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F009C47C29D2FECE00590291 /* AgendaScreen.swift */; };
+		F009C47F29D2FEF200590291 /* AgendaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F009C47E29D2FEF200590291 /* AgendaVC.swift */; };
 		F038B96D29CB2E41002E54D2 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F038B96C29CB2E41002E54D2 /* HomeScreen.swift */; };
 		F038B97429CB31AB002E54D2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F038B97329CB31AB002E54D2 /* HomeViewModel.swift */; };
 		F038B97B29CB638F002E54D2 /* Bakcground + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F038B97A29CB638F002E54D2 /* Bakcground + Extension.swift */; };
@@ -38,6 +40,8 @@
 		F002758E29D1BA8400756631 /* TarefasVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarefasVC.swift; sourceTree = "<group>"; };
 		F002759329D1C54F00756631 /* TableView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView + Extension.swift"; sourceTree = "<group>"; };
 		F002759529D1D1C900756631 /* TarefasTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarefasTableViewCell.swift; sourceTree = "<group>"; };
+		F009C47C29D2FECE00590291 /* AgendaScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaScreen.swift; sourceTree = "<group>"; };
+		F009C47E29D2FEF200590291 /* AgendaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaVC.swift; sourceTree = "<group>"; };
 		F038B96C29CB2E41002E54D2 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		F038B97329CB31AB002E54D2 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		F038B97A29CB638F002E54D2 /* Bakcground + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bakcground + Extension.swift"; sourceTree = "<group>"; };
@@ -114,6 +118,31 @@
 				F002759529D1D1C900756631 /* TarefasTableViewCell.swift */,
 			);
 			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		F009C47929D2FE8D00590291 /* Agenda */ = {
+			isa = PBXGroup;
+			children = (
+				F009C47B29D2FEA800590291 /* AgendaVC */,
+				F009C47A29D2FE9C00590291 /* AgendaScreen */,
+			);
+			path = Agenda;
+			sourceTree = "<group>";
+		};
+		F009C47A29D2FE9C00590291 /* AgendaScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F009C47C29D2FECE00590291 /* AgendaScreen.swift */,
+			);
+			path = AgendaScreen;
+			sourceTree = "<group>";
+		};
+		F009C47B29D2FEA800590291 /* AgendaVC */ = {
+			isa = PBXGroup;
+			children = (
+				F009C47E29D2FEF200590291 /* AgendaVC.swift */,
+			);
+			path = AgendaVC;
 			sourceTree = "<group>";
 		};
 		F038B96E29CB2E46002E54D2 /* Home */ = {
@@ -220,6 +249,7 @@
 				F038B96E29CB2E46002E54D2 /* Home */,
 				F038B98029CB73C5002E54D2 /* Calculadora */,
 				F002758429D1AF4A00756631 /* Tarefas */,
+				F009C47929D2FE8D00590291 /* Agenda */,
 				F03B76CE29CB2A51007D79D7 /* AppDelegate.swift */,
 				F03B76D029CB2A51007D79D7 /* SceneDelegate.swift */,
 				F03B76D729CB2A53007D79D7 /* Assets.xcassets */,
@@ -300,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F002759629D1D1C900756631 /* TarefasTableViewCell.swift in Sources */,
+				F009C47D29D2FECE00590291 /* AgendaScreen.swift in Sources */,
 				F038B96D29CB2E41002E54D2 /* HomeScreen.swift in Sources */,
 				F038B98529CB741B002E54D2 /* CalculadoraHomeVC.swift in Sources */,
 				F03B76D329CB2A51007D79D7 /* HomeVC.swift in Sources */,
@@ -308,6 +339,7 @@
 				F038B97F29CB66A9002E54D2 /* ButtonConfig + Extension.swift in Sources */,
 				F002758329CCDDD400756631 /* Constraints + Extension.swift in Sources */,
 				F038B97D29CB6495002E54D2 /* LabelConfig + Extension.swift in Sources */,
+				F009C47F29D2FEF200590291 /* AgendaVC.swift in Sources */,
 				F002758B29D1B9E100756631 /* TarefasScreen.swift in Sources */,
 				F002758F29D1BA8400756631 /* TarefasVC.swift in Sources */,
 				F002757F29CCD13900756631 /* CalculadoraViewModel.swift in Sources */,

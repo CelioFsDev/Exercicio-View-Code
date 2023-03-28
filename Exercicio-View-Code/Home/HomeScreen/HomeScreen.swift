@@ -11,6 +11,7 @@ protocol HomeScreenProtocol: AnyObject {
     func tappedCalculadoraButton()
     func tappedAlteraCorButton()
     func tappedTarefasButton()
+    func tappedAgendaButton()
 }
 
 class HomeScreen: UIView {
@@ -54,6 +55,15 @@ class HomeScreen: UIView {
         delegate?.tappedTarefasButton()
     }
     
+    lazy var agendaButton: UIButton = {
+        let button = UIButton(title: "Agenda", font: UIFont.systemFont(ofSize: 16), titleColor: .white, target: self, action: #selector(tappedAgendaButton), isEnable: true, backgroundColor: .blue, textAlignment: .center, cornerRadius: 7, clipsToBounds: true)
+        
+        return button
+    }()
+    @objc func tappedAgendaButton(_ sender: UIButton){
+        delegate?.tappedAgendaButton()
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupCreationView()
@@ -72,6 +82,7 @@ class HomeScreen: UIView {
         addSubview(calculadoraButton)
         addSubview(alteraCorButton)
         addSubview(tarefasButton)
+        addSubview(agendaButton)
     }
     
 
@@ -95,6 +106,11 @@ class HomeScreen: UIView {
             tarefasButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             tarefasButton.heightAnchor.constraint(equalToConstant: 50),
             tarefasButton.widthAnchor.constraint(equalToConstant: 100),
+            
+            agendaButton.topAnchor.constraint(equalTo: calculadoraButton.bottomAnchor, constant: 20),
+            agendaButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            agendaButton.heightAnchor.constraint(equalToConstant: 50),
+            agendaButton.widthAnchor.constraint(equalToConstant: 100),
             
         ])
     }
