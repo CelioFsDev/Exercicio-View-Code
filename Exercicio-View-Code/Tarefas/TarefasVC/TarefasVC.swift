@@ -10,12 +10,7 @@ import UIKit
 class TarefasVC: UIViewController {
 
     var tarefasScreen: TarefasScreen?
-    var tarefas: [String] = []
-    
-    override func loadView() {
-        self.tarefasScreen = TarefasScreen()
-        self.view = self.tarefasScreen
-    }
+    var viewModel = TarefasViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +24,8 @@ class TarefasVC: UIViewController {
 
 }
 
-extension TarefasVC: UITextFieldDelegate{
+
+extension TarefasVC: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         print(#function)
     }
@@ -47,7 +43,7 @@ extension TarefasVC: TarefasScreenProtocol {
     func tappedConfirmedButton() {
         guard let tarefa = tarefasScreen?.tarefasTextField.text, !tarefa.isEmpty else { return }
         
-        tarefas.append(tarefa)
+        viewModel.adicionarTarefa(tarefa)
         tarefasScreen?.tarefasTextField.text = ""
         tarefasScreen?.tableView.reloadData()
     }
@@ -56,26 +52,28 @@ extension TarefasVC: TarefasScreenProtocol {
 
 extension TarefasVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tarefas.count
+        return viewModel.getNumeroDeTarefas()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as! TarefasTableViewCell
         
-        let tarefa = tarefas[indexPath.row]
+        let tarefa = viewModel.getTarefaEm(indexPath.row)
         cell.configureCell(title: tarefa)
         return cell
-        
     }
+    
+
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
     
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // remover a tarefa do array
-            tarefas.remove(at: indexPath.row)
+            viewModel.removerTarefaEm(indexPath.row)
             
             // remover a linha da tabela
             tableView.deleteRows(at: [indexPath], with: .fade)
@@ -90,12 +88,12 @@ extension TarefasVC: UITableViewDataSource, UITableViewDelegate {
 
             let alertController = UIAlertController(title: "Editar Tarefa", message: "Insira o novo texto para a tarefa", preferredStyle: .alert)
             alertController.addTextField { textField in
-                textField.text = self.tarefas[indexPath.row]
+                textField.text = self.viewModel.getTarefaEm(indexPath.row)
             }
 
             let confirmAction = UIAlertAction(title: "Confirmar", style: .default) { _ in
                 if let newTarefa = alertController.textFields?.first?.text, !newTarefa.isEmpty {
-                    self.tarefas[indexPath.row] = newTarefa
+                    self.viewModel.atualizarTarefa(newTarefa, em: indexPath.row)
                     self.tarefasScreen?.tableView.reloadRows(at: [indexPath], with: .automatic)
                 }
             }
@@ -111,15 +109,19 @@ extension TarefasVC: UITableViewDataSource, UITableViewDelegate {
         let deleteAction = UITableViewRowAction(style: .destructive, title: "Deletar") { [weak self] _, indexPath in
             guard let self = self else { return }
 
-            self.tarefas.remove(at: indexPath.row)
+            self.viewModel.removerTarefaEm(indexPath.row)
             self.tarefasScreen?.tableView.deleteRows(at: [indexPath], with: .fade)
         }
         deleteAction.backgroundColor = .red
+
         return [deleteAction, editAction]
+    }
+
+        // ...
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(#function)
     }
 
-}
+

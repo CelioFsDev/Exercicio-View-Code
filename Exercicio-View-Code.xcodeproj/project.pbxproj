@@ -76,7 +76,6 @@
 		F002758429D1AF4A00756631 /* Tarefas */ = {
 			isa = PBXGroup;
 			children = (
-				F002759029D1C39700756631 /* TableView */,
 				F002758729D1B8E700756631 /* TarefasVC */,
 				F002758629D1B8E500756631 /* TarefasScreen */,
 				F002758529D1B8E200756631 /* TarefasViewModel */,
@@ -96,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				F002758A29D1B9E100756631 /* TarefasScreen.swift */,
+				F002759029D1C39700756631 /* TableView */,
 			);
 			path = TarefasScreen;
 			sourceTree = "<group>";
