@@ -225,9 +225,9 @@
 		F038B98029CB73C5002E54D2 /* Calculadora */ = {
 			isa = PBXGroup;
 			children = (
-				F038B98329CB73EB002E54D2 /* CalculadoraHomeViewModel */,
 				F038B98229CB73E0002E54D2 /* CalculadoraHomeVC */,
 				F038B98129CB73D5002E54D2 /* CalculadoraHomeScreen */,
+				F038B98329CB73EB002E54D2 /* CalculadoraHomeViewModel */,
 			);
 			path = Calculadora;
 			sourceTree = "<group>";

@@ -10,8 +10,8 @@ import UIKit
 
 class CalculadoraHomeViewModel {
     
-    private var numero1: Int?
-    private var numero2: Int?
+    private var numero1: Double?
+    private var numero2: Double?
     private var operacao: Operacao = .soma
     
     var resultado: String? {
@@ -37,11 +37,11 @@ class CalculadoraHomeViewModel {
     }
     
     func setNumero1(_ numero: String?) {
-        self.numero1 = Int(numero ?? "")
+        self.numero1 = Double(numero ?? "")
     }
     
     func setNumero2(_ numero: String?) {
-        self.numero2 = Int(numero ?? "")
+        self.numero2 = Double(numero ?? "")
     }
     
     func setOperacao(_ operacao: Operacao) {
