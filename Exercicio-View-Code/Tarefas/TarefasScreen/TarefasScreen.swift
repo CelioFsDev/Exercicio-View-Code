@@ -8,11 +8,11 @@
 import UIKit
 
 protocol TarefasScreenProtocol: AnyObject {
-    func tappedConfirmedButton()
+    func tappedTarefasButton()
 }
 
+
 class TarefasScreen: UIView {
-   
     
     weak var delegate: TarefasScreenProtocol?
     
@@ -22,33 +22,43 @@ class TarefasScreen: UIView {
     }
     
     lazy var titleLabel: UILabel = {
-        let label = UILabel(text: "Tarefas", font: UIFont.systemFont(ofSize: 24), textColor: .black)
-
-        return label
-    }()
-    
-    lazy var tarefasTextField: UITextField = {
-        let txf = UITextField(placeholder: "Digite a Tarefa", textColor:.black , font: UIFont.systemFont(ofSize: 20), backgroundColor: .gray.withAlphaComponent(0.2), textAlignment: .center, cornerRadius: 7, clipsToBounds: true, isEnabled: true, isUserInteractionEnabled: true, keyboardType: .default)
+        var label = UILabel(text: "Tarefas", font: UIFont.boldSystemFont(ofSize: 24), textColor: .black)
         
-        return txf
+        return label
+        
     }()
     
-    lazy var confirmedButton: UIButton = {
-        let button = UIButton(title: "Confirmar", font: UIFont.systemFont(ofSize: 16), titleColor: .white, target: self, action: #selector(tappedConfirmedButton), isEnable: true, backgroundColor: .blue, textAlignment: .center, cornerRadius: 7, clipsToBounds: true)
+    lazy var textLabel: UILabel = {
+        var label = UILabel(text: "Agende sua tarefa", font: UIFont.boldSystemFont(ofSize: 20), textColor: .black)
+        
+        return label
+        
+    }()
+    
+    lazy var tarefaTextField: UITextField = {
+        var tf = UITextField(placeholder: "Digite aqui sua tarefa", textColor: .black.withAlphaComponent(0.5), font: UIFont.systemFont(ofSize: 16), backgroundColor: .darkGray.withAlphaComponent(0.3), textAlignment: .left, cornerRadius: 7, clipsToBounds: true, isEnabled: true, isUserInteractionEnabled: true, keyboardType: .twitter)
+        
+        return tf
+    }()
+    public func textFieldDelegate(delegate: UITextFieldDelegate){
+        self.tarefaTextField.delegate = delegate
+    }
+    
+    lazy var tarefaButton: UIButton = {
+        var button = UIButton(title: "Confirmar", font: UIFont.systemFont(ofSize: 16), titleColor: .white, target: self, action: #selector(tappedTarefasButton), isEnable: true, backgroundColor: .blue,textAlignment: .left, cornerRadius: 7,clipsToBounds: true)
         
         return button
     }()
     
-    @objc func tappedConfirmedButton(_ sender: UIButton){
-        delegate?.tappedConfirmedButton()
-        tableView.reloadData()
+    @objc func tappedTarefasButton(_ sender: UIButton){
+        delegate?.tappedTarefasButton()
     }
-
+    
     lazy var tableView: UITableView = {
         let tbv = UITableView()
         tbv.translatesAutoresizingMaskIntoConstraints = false
         tbv.separatorStyle = .singleLine
-        tbv.backgroundColor = .white
+        tbv.backgroundColor = .darkGray.withAlphaComponent(0.5)
         tbv.rowHeight = UITableView.automaticDimension
         tbv.estimatedRowHeight = 44
         tbv.allowsSelection = true
@@ -60,19 +70,14 @@ class TarefasScreen: UIView {
         tableView.dataSource = dataSource
         tableView.delegate = delegate
     }
-
-    public func textFieldDelegate(delegate: UITextFieldDelegate){
-        self.tarefasTextField.delegate = delegate
-    }
+   
     
     
-
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupCreationView()
         configConstraints()
         self.setBackgroundColor(.white)
-        tableView.reloadData() //CArrega os dados da tableView
     }
     
     required init?(coder: NSCoder) {
@@ -82,10 +87,10 @@ class TarefasScreen: UIView {
     
     private func setupCreationView(){
         addSubview(titleLabel)
-        addSubview(tarefasTextField)
-        addSubview(confirmedButton)
+        addSubview(textLabel)
+        addSubview(tarefaTextField)
+        addSubview(tarefaButton)
         addSubview(tableView)
-
     }
     
 
@@ -93,26 +98,29 @@ class TarefasScreen: UIView {
     private func configConstraints(){
         NSLayoutConstraint.activate([
             
-            titleLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
-            titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            titleLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 20),
+            titleLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             
-            tarefasTextField.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 50),
-            tarefasTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            tarefasTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            tarefasTextField.widthAnchor.constraint(equalToConstant: 150),
-            tarefasTextField.heightAnchor.constraint(equalToConstant: 50),
+            textLabel.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 40),
+            textLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             
-            confirmedButton.topAnchor.constraint(equalTo: tarefasTextField.bottomAnchor, constant: 20),
-            confirmedButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            confirmedButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            confirmedButton.widthAnchor.constraint(equalToConstant: 150),
-            confirmedButton.heightAnchor.constraint(equalToConstant: 30),
+            tarefaTextField.topAnchor.constraint(equalTo: self.textLabel.bottomAnchor, constant: 20),
+            tarefaTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            tarefaTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            tarefaTextField.heightAnchor.constraint(equalToConstant: 40),
             
-            tableView.topAnchor.constraint(equalTo: confirmedButton.bottomAnchor, constant: 20),
-            tableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            tableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            tableView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 20),
+            tarefaButton.topAnchor.constraint(equalTo: self.tarefaTextField.bottomAnchor, constant: 20),
+            tarefaButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            tarefaButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            tarefaButton.heightAnchor.constraint(equalToConstant: 35),
+            
+            tableView.topAnchor.constraint(equalTo: self.tarefaButton.bottomAnchor, constant: 10),
+            tableView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            tableView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20), // Corrigido
+            tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10) // Corrigido
+                   
             
         ])
     }
+
 }

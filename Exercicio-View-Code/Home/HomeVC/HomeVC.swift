@@ -30,6 +30,10 @@ class HomeVC: UIViewController {
 }
 
 extension HomeVC: HomeScreenProtocol {
+    func tappedListaDeTarefaButton() {
+        print(#function)
+    }
+    
     func tappedAgendaButton() {
         let agendaVC = AgendaVC()
         self.navigationController?.pushViewController(agendaVC, animated: true)
@@ -51,4 +55,12 @@ extension HomeVC: HomeScreenProtocol {
     }
     
     
+}
+extension HomeVC: InjectionAware {
+    func injected() {
+        // Código que será executado quando a classe for injetada (hot-reload)
+        // Exemplo: Recarregar a interface e aplicar as mudanças
+        loadView()
+        viewDidLoad()
+    }
 }

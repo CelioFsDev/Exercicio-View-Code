@@ -14,7 +14,6 @@
 		F002758D29D1B9EE00756631 /* TarefasViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F002758C29D1B9EE00756631 /* TarefasViewModel.swift */; };
 		F002758F29D1BA8400756631 /* TarefasVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F002758E29D1BA8400756631 /* TarefasVC.swift */; };
 		F002759429D1C54F00756631 /* TableView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F002759329D1C54F00756631 /* TableView + Extension.swift */; };
-		F002759629D1D1C900756631 /* TarefasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F002759529D1D1C900756631 /* TarefasTableViewCell.swift */; };
 		F009C47D29D2FECE00590291 /* AgendaScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F009C47C29D2FECE00590291 /* AgendaScreen.swift */; };
 		F009C47F29D2FEF200590291 /* AgendaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F009C47E29D2FEF200590291 /* AgendaVC.swift */; };
 		F009C48329D345B500590291 /* AgendaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F009C48229D345B500590291 /* AgendaTableViewCell.swift */; };
@@ -31,6 +30,7 @@
 		F03B76D329CB2A51007D79D7 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03B76D229CB2A51007D79D7 /* HomeVC.swift */; };
 		F03B76D829CB2A53007D79D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F03B76D729CB2A53007D79D7 /* Assets.xcassets */; };
 		F03B76DB29CB2A53007D79D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F03B76D929CB2A53007D79D7 /* LaunchScreen.storyboard */; };
+		F0E40DE829E5ECA30085ACDC /* TarefasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E40DE729E5ECA30085ACDC /* TarefasTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +41,6 @@
 		F002758C29D1B9EE00756631 /* TarefasViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarefasViewModel.swift; sourceTree = "<group>"; };
 		F002758E29D1BA8400756631 /* TarefasVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarefasVC.swift; sourceTree = "<group>"; };
 		F002759329D1C54F00756631 /* TableView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView + Extension.swift"; sourceTree = "<group>"; };
-		F002759529D1D1C900756631 /* TarefasTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarefasTableViewCell.swift; sourceTree = "<group>"; };
 		F009C47C29D2FECE00590291 /* AgendaScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaScreen.swift; sourceTree = "<group>"; };
 		F009C47E29D2FEF200590291 /* AgendaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaVC.swift; sourceTree = "<group>"; };
 		F009C48229D345B500590291 /* AgendaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaTableViewCell.swift; sourceTree = "<group>"; };
@@ -60,6 +59,7 @@
 		F03B76D729CB2A53007D79D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F03B76DA29CB2A53007D79D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F03B76DC29CB2A53007D79D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0E40DE729E5ECA30085ACDC /* TarefasTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarefasTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +94,8 @@
 		F002758629D1B8E500756631 /* TarefasScreen */ = {
 			isa = PBXGroup;
 			children = (
+				F0E40DE629E5EC650085ACDC /* TableViewCell */,
 				F002758A29D1B9E100756631 /* TarefasScreen.swift */,
-				F002759029D1C39700756631 /* TableView */,
 			);
 			path = TarefasScreen;
 			sourceTree = "<group>";
@@ -106,22 +106,6 @@
 				F002758E29D1BA8400756631 /* TarefasVC.swift */,
 			);
 			path = TarefasVC;
-			sourceTree = "<group>";
-		};
-		F002759029D1C39700756631 /* TableView */ = {
-			isa = PBXGroup;
-			children = (
-				F002759129D1C3E000756631 /* TableViewCell */,
-			);
-			path = TableView;
-			sourceTree = "<group>";
-		};
-		F002759129D1C3E000756631 /* TableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				F002759529D1D1C900756631 /* TarefasTableViewCell.swift */,
-			);
-			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 		F009C47929D2FE8D00590291 /* Agenda */ = {
@@ -289,6 +273,14 @@
 			path = "Exercicio-View-Code";
 			sourceTree = "<group>";
 		};
+		F0E40DE629E5EC650085ACDC /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F0E40DE729E5ECA30085ACDC /* TarefasTableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -359,7 +351,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F002759629D1D1C900756631 /* TarefasTableViewCell.swift in Sources */,
 				F009C47D29D2FECE00590291 /* AgendaScreen.swift in Sources */,
 				F038B96D29CB2E41002E54D2 /* HomeScreen.swift in Sources */,
 				F038B98529CB741B002E54D2 /* CalculadoraHomeVC.swift in Sources */,
@@ -376,6 +367,7 @@
 				F009C48329D345B500590291 /* AgendaTableViewCell.swift in Sources */,
 				F002757F29CCD13900756631 /* CalculadoraViewModel.swift in Sources */,
 				F038B98729CB7430002E54D2 /* CalculadoraHomeScreen.swift in Sources */,
+				F0E40DE829E5ECA30085ACDC /* TarefasTableViewCell.swift in Sources */,
 				F038B97429CB31AB002E54D2 /* HomeViewModel.swift in Sources */,
 				F002758129CCD53D00756631 /* TextFieldConfig + Extension.swift in Sources */,
 				F002759429D1C54F00756631 /* TableView + Extension.swift in Sources */,

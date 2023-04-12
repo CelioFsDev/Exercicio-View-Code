@@ -12,6 +12,7 @@ protocol HomeScreenProtocol: AnyObject {
     func tappedAlteraCorButton()
     func tappedTarefasButton()
     func tappedAgendaButton()
+    func tappedListaDeTarefaButton()
 }
 
 class HomeScreen: UIView {
@@ -62,6 +63,15 @@ class HomeScreen: UIView {
     }()
     @objc func tappedAgendaButton(_ sender: UIButton){
         delegate?.tappedAgendaButton()
+    }
+    
+    lazy var listaDeTarefas: UIButton = {
+        let button = UIButton()
+        
+        return button
+    }()
+    @objc func tappedListaDeTarefaButton(_sender: UIButton){
+        delegate?.tappedListaDeTarefaButton()
     }
     
     override init(frame: CGRect) {
@@ -115,4 +125,7 @@ class HomeScreen: UIView {
         ])
     }
     
+}
+protocol InjectionAware {
+    func injected()
 }

@@ -8,25 +8,16 @@
 import Foundation
 
 class TarefasViewModel {
-    private var tarefas: [String] = []
     
-    func adicionarTarefa(_ tarefa: String) {
-        tarefas.append(tarefa)
+    struct TarefaItem {
+       
+        let title: String
     }
     
-    func atualizarTarefa(_ tarefa: String, em index: Int) {
-        tarefas[index] = tarefa
-    }
+    private(set) var tarefas:[TarefaItem] = []
     
-    func removerTarefaEm(_ index: Int) {
-        tarefas.remove(at: index)
-    }
-    
-    func getTarefaEm(_ index: Int) -> String {
-        return tarefas[index]
-    }
-    
-    func getNumeroDeTarefas() -> Int {
-        return tarefas.count
+    func adicionarTarefa(titulo: String){
+        let novaTarefa = TarefaItem(title: titulo)
+        tarefas.append(novaTarefa)
     }
 }
