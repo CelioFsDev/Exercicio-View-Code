@@ -30,6 +30,10 @@
 		F03B76D329CB2A51007D79D7 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03B76D229CB2A51007D79D7 /* HomeVC.swift */; };
 		F03B76D829CB2A53007D79D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F03B76D729CB2A53007D79D7 /* Assets.xcassets */; };
 		F03B76DB29CB2A53007D79D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F03B76D929CB2A53007D79D7 /* LaunchScreen.storyboard */; };
+		F08CD05A29E7137F000B739A /* Tarefas2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08CD05929E7137F000B739A /* Tarefas2ViewController.swift */; };
+		F08CD05C29E71392000B739A /* Tarefas2Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08CD05B29E71392000B739A /* Tarefas2Screen.swift */; };
+		F08CD05E29E713A7000B739A /* Tarefas2ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08CD05D29E713A7000B739A /* Tarefas2ViewModel.swift */; };
+		F08CD06029E72156000B739A /* Passo a passo View Controller.txt in Resources */ = {isa = PBXBuildFile; fileRef = F08CD05F29E72156000B739A /* Passo a passo View Controller.txt */; };
 		F0E40DE829E5ECA30085ACDC /* TarefasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E40DE729E5ECA30085ACDC /* TarefasTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +63,10 @@
 		F03B76D729CB2A53007D79D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F03B76DA29CB2A53007D79D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F03B76DC29CB2A53007D79D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F08CD05929E7137F000B739A /* Tarefas2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tarefas2ViewController.swift; sourceTree = "<group>"; };
+		F08CD05B29E71392000B739A /* Tarefas2Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tarefas2Screen.swift; sourceTree = "<group>"; };
+		F08CD05D29E713A7000B739A /* Tarefas2ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tarefas2ViewModel.swift; sourceTree = "<group>"; };
+		F08CD05F29E72156000B739A /* Passo a passo View Controller.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Passo a passo View Controller.txt"; sourceTree = "<group>"; };
 		F0E40DE729E5ECA30085ACDC /* TarefasTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarefasTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -264,6 +272,7 @@
 				F038B98029CB73C5002E54D2 /* Calculadora */,
 				F002758429D1AF4A00756631 /* Tarefas */,
 				F009C47929D2FE8D00590291 /* Agenda */,
+				F08CD05829E71357000B739A /* TarefasComoFazer */,
 				F03B76CE29CB2A51007D79D7 /* AppDelegate.swift */,
 				F03B76D029CB2A51007D79D7 /* SceneDelegate.swift */,
 				F03B76D729CB2A53007D79D7 /* Assets.xcassets */,
@@ -271,6 +280,17 @@
 				F03B76DC29CB2A53007D79D7 /* Info.plist */,
 			);
 			path = "Exercicio-View-Code";
+			sourceTree = "<group>";
+		};
+		F08CD05829E71357000B739A /* TarefasComoFazer */ = {
+			isa = PBXGroup;
+			children = (
+				F08CD05929E7137F000B739A /* Tarefas2ViewController.swift */,
+				F08CD05B29E71392000B739A /* Tarefas2Screen.swift */,
+				F08CD05D29E713A7000B739A /* Tarefas2ViewModel.swift */,
+				F08CD05F29E72156000B739A /* Passo a passo View Controller.txt */,
+			);
+			path = TarefasComoFazer;
 			sourceTree = "<group>";
 		};
 		F0E40DE629E5EC650085ACDC /* TableViewCell */ = {
@@ -341,6 +361,7 @@
 			files = (
 				F03B76DB29CB2A53007D79D7 /* LaunchScreen.storyboard in Resources */,
 				F03B76D829CB2A53007D79D7 /* Assets.xcassets in Resources */,
+				F08CD06029E72156000B739A /* Passo a passo View Controller.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,15 +379,18 @@
 				F002758D29D1B9EE00756631 /* TarefasViewModel.swift in Sources */,
 				F03B76CF29CB2A51007D79D7 /* AppDelegate.swift in Sources */,
 				F038B97F29CB66A9002E54D2 /* ButtonConfig + Extension.swift in Sources */,
+				F08CD05C29E71392000B739A /* Tarefas2Screen.swift in Sources */,
 				F009C48629D369EC00590291 /* AgendaViewModel.swift in Sources */,
 				F002758329CCDDD400756631 /* Constraints + Extension.swift in Sources */,
 				F038B97D29CB6495002E54D2 /* LabelConfig + Extension.swift in Sources */,
 				F009C47F29D2FEF200590291 /* AgendaVC.swift in Sources */,
 				F002758B29D1B9E100756631 /* TarefasScreen.swift in Sources */,
 				F002758F29D1BA8400756631 /* TarefasVC.swift in Sources */,
+				F08CD05A29E7137F000B739A /* Tarefas2ViewController.swift in Sources */,
 				F009C48329D345B500590291 /* AgendaTableViewCell.swift in Sources */,
 				F002757F29CCD13900756631 /* CalculadoraViewModel.swift in Sources */,
 				F038B98729CB7430002E54D2 /* CalculadoraHomeScreen.swift in Sources */,
+				F08CD05E29E713A7000B739A /* Tarefas2ViewModel.swift in Sources */,
 				F0E40DE829E5ECA30085ACDC /* TarefasTableViewCell.swift in Sources */,
 				F038B97429CB31AB002E54D2 /* HomeViewModel.swift in Sources */,
 				F002758129CCD53D00756631 /* TextFieldConfig + Extension.swift in Sources */,

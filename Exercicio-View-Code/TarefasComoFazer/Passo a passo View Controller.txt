@@ -1,0 +1,103 @@
+Passo a passo ViewController
+
+Primeiro vamos ver se ja esta criado os 3 arquivos: A View Controller, a Screen e o ViewModel, se nao ja sabe o que fazer.
+
+Na View controller a primeira coisa que vamos fazer é
+
+ 1 - Criar a Variavel opcional do tipo da Screen
+ var tarefasSceen: TarefasScreen?
+ 
+aqui voce ja pode criar a instancia da Model se ja existir uma, chamando a instancia de model TarefasViewModel
+let viewModel = TarefasViewModel()
+
+Agora cria o loadView()
+e dentro dele inicializa a variavel tarefasScreen como uma estancia de TarefasScreen para que consiga atribuir depois como uma View Principal deste controller
+
+
+override func loadView(){
+        self.tarefasScreen = TarefasScreen()
+        self.view = self.tarefasScreen
+}
+
+
+e dentro do viewDidLoad(){} vamos colocar depois as delegates do textfield, delegate dos botoes, e da tableview e depois criar as extension de cada uma logo abaixo.
+
+
+Feito isso vamos criar nossa TarefasScreen pois ela ja esta configurada para ser nossa view principal.
+
+ja vamos criar primeio um protocol para cuidar das açoes de futuros botoes
+Pode ser feito tanto agora no comeco se ja tiver ideia do que fazer, ou pode ser feito depois de criado a screen
+
+protocol TarefasScreenProtocol: AnyObject {
+    func tappedTarefasButton()
+}
+
+e dentro da classe TarefasScreen vamos criar o delegate do tipo TarefasScreenProtocol
+    weak var delegate: TarefasScreenProtocol?
+
+e depois o metodo para atribuir o delegate
+    public func delegate(delegate: TarefasScreenProtocol){
+        self.delegate = delegate
+    }
+    
+    Feito isso ja esta configurado as acoes do delegate para os futuros botoes
+    
+    
+    Agora vamos criar a nossa Screen
+    
+    Existem Snippets ja pre configurado para criar toda a View Screen
+    
+    Entao criar os compenentes de tela, ja existem tambem extension para cada tipo de componente.
+    
+    e caso crie um botao tem que ser chamado uma funcao para ele,
+    Assim:
+        // Botão para confirmar a tarefa
+    lazy var tarefaButton: UIButton = {
+        var button = UIButton(title: "Confirmar", font: UIFont.systemFont(ofSize: 16), titleColor: .white, target: self, action: #selector(tappedTarefasButton), isEnable: true, backgroundColor: .blue,textAlignment: .left, cornerRadius: 7,clipsToBounds: true)
+        return button
+    }()
+    
+    // Função chamada ao tocar no botão de tarefas
+    @objc func tappedTarefasButton(_ sender: UIButton){
+        delegate?.tappedTarefasButton()
+    }
+    
+    e caso crie uma tableView criar tambem assim:
+        // TableView para listar as tarefas
+    lazy var tableView: UITableView = {
+        let tbv = UITableView()
+        tbv.translatesAutoresizingMaskIntoConstraints = false
+        tbv.separatorStyle = .singleLine
+        tbv.backgroundColor = .darkGray.withAlphaComponent(0.5)
+        tbv.rowHeight = UITableView.automaticDimension
+        tbv.estimatedRowHeight = 44
+        tbv.allowsSelection = true
+        tbv.register(TarefasTableViewCell.self, forCellReuseIdentifier: "CustomCell")
+        return tbv
+    }()
+    
+    // Método para configurar o dataSource e o delegate da tableView
+    public func setupTableView(dataSource: UITableViewDataSource, delegate: UITableViewDelegate) {
+        tableView.dataSource = dataSource
+        tableView.delegate = delegate
+    }
+    
+    Caso tenha tambem um textfield tem que fazer sua funcao com delegate dele
+        // Campo de texto para inserir a tarefa
+    lazy var tarefaTextField: UITextField = {
+        var tf = UITextField(placeholder: "Digite aqui sua tarefa", textColor: .black.withAlphaComponent(0.5), font: UIFont.systemFont(ofSize: 16), backgroundColor: .darkGray.withAlphaComponent(0.3), textAlignment: .left, cornerRadius: 7, clipsToBounds: true, isEnabled: true, isUserInteractionEnabled: true, keyboardType: .twitter)
+        return tf
+    }()
+    
+    // Método para atribuir o delegate do campo de texto
+    public func textFieldDelegate(delegate: UITextFieldDelegate){
+        self.tarefaTextField.delegate = delegate
+    }
+    
+    Lembrando que tem que ser criado o setup dela com dataSource e o Delegate
+    
+    lembrar de addSubview em todas os itens criados, e depois chamar todas as funcoes no init frame
+    
+    e por fim criar todas as Constraints de cada elemento
+    
+    com isso ja vai conseguir visualizar sua View.
